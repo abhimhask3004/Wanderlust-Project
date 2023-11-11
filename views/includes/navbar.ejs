@@ -1,0 +1,103 @@
+<style>
+.search-btn{
+  background-color:#fe424d;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+}
+.search-btn:hover{
+  background-color:#fe424d;
+  color: #fff;
+
+}
+
+.search-btn i{
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-inp{
+  display: auto;
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+
+}
+@media  screen and (max-width: 480px){
+  .search-btn{
+  background-color:#fe424d;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0 1rem 0 1rem;
+  width: 6.6rem;
+  height: 2.3rem;
+  font-size: 14px;
+  margin-left: 230px;
+  margin-top: -36px;
+}
+
+
+.search-btn i{
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-inp{
+  font-size: 12px;
+  border-radius: 25px;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  width:14rem;
+}
+  .container-fluid{
+    background-color:white;
+    border-radius: 20px;
+  }
+}
+</style>
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+      <button class="navbar-toggler" 
+      type="button"
+       data-bs-toggle="collapse" 
+       data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explorer</a>
+        </div>
+
+
+        <!-- <form class="d-flex ms-auto" role="search"> -->
+            <div class="navbar-nav ms-auto">
+                <input class="form-control me-2 search-inp" type="search" placeholder="Search  destinations" aria-label="Search">
+                <button class="btn search-btn" id="inputBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            </div>
+          <!-- </form> -->
+
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+         <% if(!curruser){%>
+          <a class="nav-link " href="/signup"><b>Sign Up</b></a>
+          <a class="nav-link" href="/login"><b>Log In</b></a>
+         <% }%>
+         <% if(curruser){%>
+          <a class="nav-link" href="/logout"><b>Log Out</b></a>
+          <% }%>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <script>
+    const listing=require(".../models/listings.js");
+    let btn=document.getElementById("inputBtn");
+    btn.addEventListener("click",()=>{
+      let inp=document.querySelector("input");
+      let val=inp.value;
+      if(inp.value){
+        console.log("h");
+      }
+    })
+  </script> -->
