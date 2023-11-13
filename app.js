@@ -106,7 +106,7 @@ app.use((err,req,res,next)=>{
 });
 
 app.get("/",(req,res)=>{
-    res.redirect("/listings");
+    res.redirect("/listings/index.ejs");
 })
 app.listen(8080,()=>{
     console.log("server is listening port 8080");
