@@ -38,6 +38,9 @@ async function main(){
     await mongoose.connect(Dburl);
 };
 
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+});
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
@@ -105,9 +108,7 @@ app.use((err,req,res,next)=>{
     
 });
 
-app.get("/",(req,res)=>{
-    res.redirect("/listings/index.ejs");
-})
+
 app.listen(8080,()=>{
     console.log("server is listening port 8080");
 });
