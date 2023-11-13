@@ -83,6 +83,17 @@ body{
     background-color: #fe424d !important;
     border: none !important;
 }
+@media  screen and (max-width: 480px){
+    .edit-row{
+        
+        margin-left: 2.2rem;
+        margin-bottom: 4px;
+    }
+    .edit-row img{
+        height: 10rem;
+        width:9rem;
+    }
+}
 /* show style */
 .show-img{
     height: 30vh;
@@ -97,4 +108,52 @@ body{
 #map{
     height:400px;
     width: 90vh;
+}
+
+@media  screen and (max-width: 480px){
+    .show-img{
+        height: 30vh;
+        width:17rem;
+        margin-left:-3rem;
+    }
+    .btns{
+        display:flex;
+        height: auto;
+        
+        width:auto;
+    }
+    .btns a{
+        
+        width:5rem;
+    }
+    .btns button{
+        
+        width:5rem;
+    }
+    .needs-validation{
+        margin-left: -3rem;
+    }
+
+    .show-review{
+        margin-left:2rem;
+    }
+    .card-data{
+        display: flex;
+        justify-items: auto;
+        width:10.4rem;
+    }
+    .map-head{
+        margin-left:-2.3rem;
+    }
+    .show-card{
+       
+        padding-left:0;
+        padding-right: 0;
+    }
+    
+    #map{
+        height:300px;
+        width: 280px;
+        margin-left: -3rem;
+    }
 }
